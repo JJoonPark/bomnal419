@@ -15,6 +15,7 @@ function FeaturedPost(props) {
       <CardActionArea component="a" href="#">
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
+            {/* <img style={{  }} src={process.env.PUBLIC_URL + '/gallery' + post.url} alt={post.imageText} /> */}
             <Typography component="h2" variant="h5">
               {post.title}
             </Typography>
@@ -35,8 +36,8 @@ function FeaturedPost(props) {
           </CardContent>
           <CardMedia
             component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
+            sx={{ width: 160, display: { sm: 'block' } }}
+            image={process.env.PUBLIC_URL + '/gallery' + post.url}
             alt={post.imageLabel}
           />
         </Card>

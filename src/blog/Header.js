@@ -14,36 +14,39 @@ function Header(props) {
     <React.Fragment>
       
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="small">Subscribe</Button>
+        {/* <Button size="small">Subscribe</Button> */}
         <Typography
-          component="h2"
-          variant="h4"
+          component="h1"
+          variant="h8"
           color="inherit"
-          align="right"
-          noWrap
+          align="left"
           sx={{ flex: 1 }}
           marginLeft="5vw"
+          textOverflow="ellipsis"
+          whiteSpace="nowrap"
+          // textOverflow: "ellipsis"
+          // white-space: "nowrap"
         >
           {title}
         </Typography>
-        <img src={process.env.PUBLIC_URL + '/heart.png'}  style={{width: '5vw', marginleft: '-10vw' }} />
+        <img src={process.env.PUBLIC_URL + '/heart.png'}  style={{width: '12vw', marginleft: '-10vw' }} />
         <Typography
           component="h5"
-          variant="h7"
+          variant="h8"
           color="rgb(255,0,255)"
-          align="left"
-          noWrap
+          align="right"
+          
           sx={{ flex: 1 }}
           marginLeft="2vw"
         >
           {"Created by 박따뜻"}
         </Typography>
-        <IconButton>
+        {/* <IconButton>
           <SearchIcon />
-        </IconButton>
-        <Button variant="outlined" size="small">
+        </IconButton> */}
+        {/* <Button variant="outlined" size="small">
           Sign up
-        </Button>
+        </Button> */}
       </Toolbar>
       <Toolbar
         component="nav"

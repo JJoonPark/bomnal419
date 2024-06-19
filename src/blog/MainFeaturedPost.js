@@ -5,6 +5,17 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import ReactPlayer from 'react-player';
+import styled from 'styled-components';
+
+
+const Video = styled.div`  
+  // position:absolute;   
+  height:100%;
+  width:100%;
+  display:flex;
+  justifyContent: 'flex-end';
+`;
 
 function MainFeaturedPost(props) {
   const { post } = props;
@@ -36,7 +47,27 @@ function MainFeaturedPost(props) {
           left: 0,
           backgroundColor: 'rgba(0,0,0,.3)',
         }}
-      />
+      >
+        <Video>
+          <ReactPlayer 
+            url= {process.env.PUBLIC_URL + '/video.mp4'}
+            playing={true}
+            muted={true}
+            controls={false}
+            loop={true}
+            style={{
+              // position: 'absolute',
+              top: 0,
+              // left: '36.8vw',
+              display: 'flex',
+              justifyContent: 'flex-end'
+            }}
+            height = '100%'
+            
+            
+          />
+        </Video>
+      </Box>
       <Grid container>
         <Grid item md={6}>
           <Box
